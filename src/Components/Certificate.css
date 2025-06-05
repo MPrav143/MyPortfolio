@@ -1,0 +1,296 @@
+.certifications-section {
+  padding: 5rem 1rem;
+  background: 
+    linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.9)),
+    url('https://res.cloudinary.com/diwykgo1k/image/upload/v1748763285/Certificate_yvcyd7.png') center/contain no-repeat;
+  min-height: 40vh;
+  overflow: hidden;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.section-title {
+
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 10px #91a7ff88;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-tabs button {
+  padding: 0.6rem 2rem;
+  border: 2px solid #a8c0ff66;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #a8c0ff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px transparent;
+}
+
+.filter-tabs button:hover {
+  background-color: #7189ff33;
+  border-color: #7189ffcc;
+  box-shadow: 0 0 15px #7189ffcc;
+  color: #ffffff;
+}
+
+.filter-tabs button.active {
+  background: #7189ffdd;
+  border-color: #5267ff;
+  color: white;
+  box-shadow: 0 0 25px #5267ffcc;
+}
+
+.certifications-carousel {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 1.5rem 0;
+  border-radius: 20px;
+  background: rgba(20, 30, 50, 0.3);
+  box-shadow: inset 0 0 10px #5267ff66;
+  backdrop-filter: blur(10px);
+  touch-action: pan-x;
+  overflow-x: scroll;
+}
+
+.certifications-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0 2.5rem;
+  will-change: transform;
+}
+
+.certificate-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(39, 51, 90, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(39, 51, 90, 0.5);
+  border-color: #7189ffcc;
+}
+
+.card-header {
+  background: linear-gradient(45deg, #7189ff, #5267ff);
+  padding: 0.7rem 1.2rem;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.platform-badge {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card-content {
+  padding: 1.8rem 1.8rem 2rem 1.8rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 1.3rem 0;
+  font-size: 1.2rem;
+  color: #dfe7ff;
+  min-height: 4rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.view-button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #5267ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #5267ffcc;
+}
+
+.view-button:hover {
+  background-color: #4050d8;
+  box-shadow: 0 0 15px #4050d8cc;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 23, 40, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: linear-gradient(145deg, #2a3b62, #32487a);
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  width: 640px;
+  color: #e1e9ff;
+  box-shadow: 0 12px 30px rgba(39, 51, 90, 0.7);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a3b1ff;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+.modal-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.platform-tag {
+  display: inline-block;
+  background-color: #5267ff;
+  color: white;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px #5267ffcc;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.pdf-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #7189ff, #5267ff);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(81, 103, 255, 0.4);
+  margin-top: 1rem;
+}
+
+.pdf-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(81, 103, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .certificate-card {
+    flex: 0 0 260px;
+  }
+  
+  .modal {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .filter-tabs button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .certifications-carousel {
+    padding: 1rem 0;
+  }
+
+  .carousel-track {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-card {
+    flex: 0 0 220px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+    min-height: 3.5rem;
+  }
+
+  .view-button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .pdf-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
